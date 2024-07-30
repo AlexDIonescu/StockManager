@@ -6,16 +6,18 @@
     <title>Stock Manager</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f4f4f4;
         }
         header {
-            background: #007BFF;
+            background: linear-gradient(90deg, #007BFF, #00c6ff);
             color: #fff;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         header h1 {
             margin: 0;
@@ -26,24 +28,42 @@
         }
         section {
             padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .features, .screenshots {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            justify-content: center;
+            margin-bottom: 40px;
         }
         .feature, .screenshot {
-            flex: 1 1 calc(33% - 40px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
             padding: 20px;
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature:hover, .screenshot:hover {
+            transform: translateY(-10px);
+        }
+        .screenshot img {
+            width: 80%;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .screenshot img:hover {
+            transform: scale(1.05);
         }
         .cta {
             background: #28a745;
             color: #fff;
             text-align: center;
             padding: 40px 20px;
+            margin: 60px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .cta button {
             background: #fff;
@@ -52,16 +72,27 @@
             padding: 15px 30px;
             font-size: 1em;
             cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out;
+        }
+        .cta button:hover {
+            background: #ddd;
         }
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
         @media (max-width: 768px) {
             .feature, .screenshot {
                 flex: 1 1 100%;
+            }
+            .screenshot img {
+                width: 100%;
             }
         }
     </style>
@@ -77,18 +108,15 @@
         </div>
         <div class="feature">
             <h2>Hungarian stocks</h2>
-            
         </div>
-
     </section>
     <section class="screenshots">
         <div class="screenshot">
-            <img src="media/ro.png" alt="create" style="width:50%;">
+            <img src="media/ro.png" alt="Romanian stocks">
         </div>
         <div class="screenshot">
-            <img src="media/hu.png" alt="update" style="width:50%;">
+            <img src="media/hu.png" alt="Hungarian stocks">
         </div>
-
     </section>
     <section class="features">
         <div class="feature">
@@ -96,18 +124,31 @@
         </div>
         <div class="feature">
             <h2>Modifying stocks</h2>
-            
         </div>
-
     </section>
     <section class="screenshots">
         <div class="screenshot">
-            <img src="media/create.png" alt="create" style="width:50%;">
+            <img src="media/create.png" alt="Creating stocks">
         </div>
         <div class="screenshot">
-            <img src="media/update.png" alt="update" style="width:50%;">
+            <img src="media/update.png" alt="Modifying stocks">
         </div>
-
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h2>Image uploading options</h2>
+        </div>
+        <div class="feature">
+            <h2>Stock image</h2>
+        </div>
+    </section>
+    <section class="screenshots">
+        <div class="screenshot">
+            <img src="media/photo_options.png" alt="Image uploading options">
+        </div>
+        <div class="screenshot">
+            <img src="media/photo.png" alt="Stock image">
+        </div>
     </section>
 <!--     <section class="cta">
         <h2>Ready to get started?</h2>
