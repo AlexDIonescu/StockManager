@@ -51,14 +51,20 @@
             position: relative;
             overflow: hidden;
         }
+        .screenshot {
+            background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+        }
         .feature:hover, .screenshot:hover {
             transform: translateY(-10px);
         }
         .screenshot img {
-            width: 60%;
+            width: 80%;
             border-radius: 8px;
             transition: transform 0.3s ease-in-out;
             margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .screenshot img:hover {
             transform: scale(1.05);
@@ -142,14 +148,14 @@
     <section class="features">
         <div class="feature">
             <i class="fas fa-book icon"></i>
-            <h2>Romanian stocks</h2>
+            <h2>Romanian books</h2>
             <div class="screenshot">
                 <img src="media/ro.png" alt="Romanian books">
             </div>
         </div>
         <div class="feature">
             <i class="fas fa-book-open icon"></i>
-            <h2>Hungarian stocks</h2>
+            <h2>Hungarian books</h2>
             <div class="screenshot">
                 <img src="media/hu.png" alt="Hungarian books">
             </div>
@@ -158,14 +164,14 @@
     <section class="features">
         <div class="feature">
             <i class="fas fa-plus-circle icon"></i>
-            <h2>Creating stocks</h2>
+            <h2>Creating books</h2>
             <div class="screenshot">
                 <img src="media/create.png" alt="Creating books">
             </div>
         </div>
         <div class="feature">
             <i class="fas fa-edit icon"></i>
-            <h2>Modifying stocks</h2>
+            <h2>Modifying books</h2>
             <div class="screenshot">
                 <img src="media/update.png" alt="Modifying books">
             </div>
@@ -181,7 +187,7 @@
         </div>
         <div class="feature">
             <i class="fas fa-image icon"></i>
-            <h2>Stock image</h2>
+            <h2>Book cover image</h2>
             <div class="screenshot">
                 <img src="media/photo.png" alt="Book cover image">
             </div>
