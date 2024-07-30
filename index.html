@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -22,9 +24,11 @@
         header h1 {
             margin: 0;
             font-size: 3em;
+            animation: fadeInDown 1s ease-in-out;
         }
         header p {
             font-size: 1.2em;
+            animation: fadeInUp 1s ease-in-out;
         }
         section {
             padding: 60px 20px;
@@ -44,6 +48,8 @@
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
         }
         .feature:hover, .screenshot:hover {
             transform: translateY(-10px);
@@ -74,10 +80,11 @@
             font-size: 1em;
             cursor: pointer;
             border-radius: 8px;
-            transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
         .cta button:hover {
             background: #ddd;
+            transform: translateY(-5px);
         }
         footer {
             background: #333;
@@ -87,6 +94,35 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #007BFF;
+            transition: color 0.3s ease-in-out;
+        }
+        .feature:hover .icon {
+            color: #00c6ff;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @media (max-width: 768px) {
             .feature, .screenshot {
@@ -105,12 +141,14 @@
     </header>
     <section class="features">
         <div class="feature">
+            <i class="fas fa-chart-line icon"></i>
             <h2>Romanian stocks</h2>
             <div class="screenshot">
                 <img src="media/ro.png" alt="Romanian stocks">
             </div>
         </div>
         <div class="feature">
+            <i class="fas fa-chart-bar icon"></i>
             <h2>Hungarian stocks</h2>
             <div class="screenshot">
                 <img src="media/hu.png" alt="Hungarian stocks">
@@ -119,12 +157,14 @@
     </section>
     <section class="features">
         <div class="feature">
+            <i class="fas fa-plus-circle icon"></i>
             <h2>Creating stocks</h2>
             <div class="screenshot">
                 <img src="media/create.png" alt="Creating stocks">
             </div>
         </div>
         <div class="feature">
+            <i class="fas fa-edit icon"></i>
             <h2>Modifying stocks</h2>
             <div class="screenshot">
                 <img src="media/update.png" alt="Modifying stocks">
@@ -133,12 +173,14 @@
     </section>
     <section class="features">
         <div class="feature">
+            <i class="fas fa-upload icon"></i>
             <h2>Image uploading options</h2>
             <div class="screenshot">
                 <img src="media/photo_options.png" alt="Image uploading options">
             </div>
         </div>
         <div class="feature">
+            <i class="fas fa-image icon"></i>
             <h2>Stock image</h2>
             <div class="screenshot">
                 <img src="media/photo.png" alt="Stock image">
