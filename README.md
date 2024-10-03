@@ -1,2 +1,2 @@
 # StockManager
-IOS app used to manage internal stocks
+Webpage for my IOS app used to manage internal stocks
